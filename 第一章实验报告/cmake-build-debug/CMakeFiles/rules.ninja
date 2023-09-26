@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "D:\Clion\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"D:\VSCodeProgramme\OOP_Homework\第一章 实验报告" -B"D:\VSCodeProgramme\OOP_Homework\第一章 实验报告\cmake-build-debug"
+  command = "D:\Clion\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\VSCodeProgramme\OOP_Homework\第一章实验报告 -BD:\VSCodeProgramme\OOP_Homework\第一章实验报告\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
