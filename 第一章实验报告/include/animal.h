@@ -1,13 +1,16 @@
-#ifndef ANIMAL
-#define ANIMAL
+#ifndef ANIMAL_H
+#define ANIMAL_H
+
 
 #include <iostream>
 #include <string>
 #include <utility>
 #include <windows.h>
 
+
 enum genderType{Male, Female, NON_BINARY};
 enum healthStatus{BAD, NOT_GOOD, WELL, NOT_BAD, GOOD};
+
 
 struct colorType
 {
@@ -16,12 +19,14 @@ struct colorType
     int B;
 };
 
+
 struct date
 {
     int year;
     int month;
     int day;
 };
+
 
 class Animal
 {
@@ -37,7 +42,7 @@ protected:
     bool         hasOwner{};
 
 public:
-    Animal(std::string  name) : m_name(std::move(name)) {};
+    explicit Animal(std::string  name) : m_name(std::move(name)) {};
 
 public:
     static void eat(const std::string& food)
@@ -144,5 +149,6 @@ public:
         return hasOwner;
     }
 };
+
 
 #endif

@@ -1,9 +1,11 @@
 #ifndef APPLIANCE_H
 #define APPLIANCE_H
 
+
 #include "furniture.h"
 
 enum elecStatus{OFF, ON};
+
 
 class  Appliance : public Furniture
 {
@@ -41,5 +43,6 @@ public:
         return m_isOn;
     }
 };
+
 
 #endif
